@@ -33,3 +33,17 @@ export const moveZerosAgain = function(inputArray) {
 
   return inputArray;
 };
+// const input = [0, 1, 0, 3, 12];
+export const andAgain = function(inputArray) {
+  let nonZeroCount = 0;
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] != 0) {
+      inputArray[nonZeroCount] = inputArray[i];
+      nonZeroCount++;
+    }
+  }
+  for (let i = nonZeroCount; i < inputArray.length; i++) {
+    inputArray[i] = 0;
+  }
+  return inputArray;
+};
