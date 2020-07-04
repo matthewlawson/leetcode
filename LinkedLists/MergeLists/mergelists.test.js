@@ -15,7 +15,7 @@ describe("Merge lists Reordering", () => {
     }
   });
 
-  test.skip("example 2", () => {
+  test("example 2", () => {
     const listOne = [];
     const listTwo = [0];
     const expectedValues = [0];
