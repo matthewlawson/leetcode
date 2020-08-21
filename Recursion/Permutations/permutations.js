@@ -17,6 +17,12 @@ export default function(nums) {
   return permuteHelper(nums, [], []);
 }
 
+/**
+ * @param {number[]} frontOfArray
+ * @param {number[]} remainderToRearrange
+ * @param {number[]} valueSoFar
+ * @return {number[][]}
+ */
 const permuteHelper = (frontOfArray, remainderToRearrange, valueSoFar) => {
   if (frontOfArray.length == 0) {
     // Arrays in js are references so can get manipulated further after they are done...
@@ -26,9 +32,11 @@ const permuteHelper = (frontOfArray, remainderToRearrange, valueSoFar) => {
       // Choose
       let digit = frontOfArray[i];
       remainderToRearrange.push(digit);
+      // Removes that digit
       frontOfArray.splice(i, 1);
       // explore
       permuteHelper(frontOfArray, remainderToRearrange, valueSoFar);
+      // Restore the array to what it was before this permutation.
       frontOfArray.splice(i, 0, digit);
       // remove from chosen
       remainderToRearrange.pop();
@@ -41,15 +49,15 @@ const permuteHelper = (frontOfArray, remainderToRearrange, valueSoFar) => {
  Not really my solution but a port from the java leetcode solution.
 */
 export const permuteSecond = nums => {
-  function backtrack(inputLength, nums, output, first) {
-    if (first === inputLength) {
+  function backtrack(inputLength, nums, output, start) {
+    if (start === inputLength) {
       output.push([...nums]);
     }
-    for (let i = first; i < inputLength; i++) {
-      _swap(nums, first, i);
-      backtrack(inputLength, nums, output, first + 1);
+    for (let i = start; i < inputLength; i++) {
+      _swap(nums, start, i);
+      backtrack(inputLength, nums, output, start + 1);
       // Swap back..
-      _swap(nums, first, i);
+      _swap(nums, start, i);
     }
   }
   let output = [];
