@@ -13,6 +13,10 @@ export default (nums) => {
     nums.sort((a, b) => b - a); // n log n
 
     function walk(remaining, index) {
+        if(nums[index] == remaining) {
+            return true;
+        }
+
         if(nums[index] > remaining) {
             return false;
         }
@@ -24,9 +28,6 @@ export default (nums) => {
             return false;
         }
 
-        if(nums[index] == remaining) {
-            return true;
-        }
         return walk(remaining - nums[index], index + 1) || walk(remaining, index + 1)
     }
 

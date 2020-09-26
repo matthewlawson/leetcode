@@ -3,15 +3,15 @@
  * @return {string[]}
  */
 export default (string) => {
-    function permute(string, left, output) {
-        if(left == string.length) {
+    function permute(string, index, output) {
+        if(index == string.length) {
             output.push(string);
             // Base case
         }
-        for(let i = left; i < string.length; i ++) {
-            string = swapStr(string, left, i);
-            permute(string, left + 1, output);
-            string = swapStr(string, left, i);
+        for(let i = index; i < string.length; i ++) {
+            string = swapStr(string, index, i);
+            permute(string, index + 1, output);
+            string = swapStr(string, index, i);
         }
     }
     let output = [];

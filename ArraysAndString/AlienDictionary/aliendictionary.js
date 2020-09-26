@@ -29,7 +29,7 @@ function compareWord(prev, current, letterPosition) {
         }
         else {
             // console.log(prev[i], current[i], i, true)
-            return true;q
+            return true;
         }
     }
     return true;
