@@ -1,5 +1,5 @@
 import {continuousSubArraySum, continuousSubArraySum2} from "./continuoussubarraysum";
-describe('bri=ute force', () => {
+describe('brute force', () => {
     test("example one", () => {
         const input= [23,2,4,6,7];
         const target = 6;
@@ -13,7 +13,17 @@ describe('bri=ute force', () => {
         expect(continuousSubArraySum(input, target)).toBe(true);
     })
 
-
+    test("lots of zzeros", () => {
+        const input= [5,0,0,0]
+        const target = 3;
+        expect(continuousSubArraySum(input, target)).toBe(true);
+    })
+    // This is a fail
+    test.skip("my example 2 ", () => {
+        const input= [5,0,0,0]
+        const target = 0;
+        expect(continuousSubArraySum(input, target)).toBe(true);
+    })
 
 })
 
