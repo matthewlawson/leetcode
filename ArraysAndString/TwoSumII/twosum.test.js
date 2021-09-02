@@ -1,4 +1,4 @@
-import { twoSum } from "./twoSum";
+import { twoSum } from "./twosum";
 
 describe("o(n) solution", () => {
     test("Example 1", () => {

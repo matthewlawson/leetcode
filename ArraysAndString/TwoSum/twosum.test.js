@@ -1,4 +1,4 @@
-import {twoSumNSquare, twoSum} from "./twoSum";
+import {twoSumNSquare, twoSum} from "./twosum";
 
 describe ("n^2 solution", () => {
     test("Example 1", () => {
