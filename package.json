@@ -16,11 +16,10 @@
     "url": "https://github.com/matthewlawson/leetcode/issues"
   },
   "homepage": "https://github.com/matthewlawson/leetcode#readme",
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "babel-jest": "^27.1.0",
-    "jest": "^27.1.0"
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
   }
 }
