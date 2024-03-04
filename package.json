@@ -18,7 +18,7 @@
   "homepage": "https://github.com/matthewlawson/leetcode#readme",
   "devDependencies": {
     "@babel/core": "^7.23.7",
-    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-env": "^7.24.0",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0"
   }
